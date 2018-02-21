@@ -1,6 +1,6 @@
 exports.catchErrors = (fn) => {
 	return function(req, res, next) {
-		console.log('in here')
+		console.log('in catchErrors')
 		return fn(req, res, next).catch(next)
 	}
 }
