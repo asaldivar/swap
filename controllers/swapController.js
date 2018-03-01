@@ -65,6 +65,6 @@ exports.getSwapTags = async (req, res) => {
 	const tagsPromise = Swap.getTagsList()
 	const swapsPromise = Swap.find({ tags: tag })
 	const [tags, swaps] = await Promise.all([tagsPromise, swapsPromise])
-	console.log('tags:',tags)
+
 	res.json({ tags, swaps })
 }

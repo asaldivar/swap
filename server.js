@@ -19,13 +19,9 @@ mongoose.connection.on('error', (err) => {
 // import models
 require('./models/Vendor')
 require('./models/Swap')
-require('./models/Review')
-// require('./models/Spectator')
-// require('./models/Item')
 
 // implement routes
-const routes = require('./routes/index')
-app.use('/api', routes)
+require('./routes/index')(app)
 
 // start server
 app.set('port', process.env.PORT || 8080)
